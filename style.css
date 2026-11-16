@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-position: inside;
+}
+
+nav {
+    background-color: rgb(26, 26, 36);
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    min-height: 80px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+nav a {
+    width: 100px;
+    padding: 6px 0;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius:10px;
+    text-align: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.case {
+    padding: 6px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+    width: 400px;
+    height: 350px;
+}
+
+
+/* Onglet */
+
+.menu {
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    height: 120px;
+}
+
+.navmenu {
+    display: flex;
+}
+
+.ongletbouton {
+    width: 75px;
+    background-color: lightskyblue;
+    border: 1px solid black;
+    border-top: none;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#contentmenu {
+    height: 200px;
+    text-align: center;
+    line-break: normal!;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#contentmenu p {
+    align-items: center;
+}
+
+/* Notification */
+
+#case-notif {
+    justify-content: end;
+    align-items: end;
+    padding: 20px;
+}
+
+#notif {
+    background-color: lightskyblue;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    border-bottom-right-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition-duration: 300ms;
+}
+
+#notif p {
+    display: none;
+}
+
+#notif span {
+    font-size: 40px;
+}
+
+
+#notif:hover {
+    width: 360px;
+    height: 200px;
+}
+
+/* To Do List */
+
+#todolistSub {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Relie le fichier JavaScript (un peu comme link pour stylesheet) -->
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <nav>
+      <h1>Les objets JS</h1>
+      <a href="index.html">Formulaire</a>
+      <a href="window.html">Window</a>
+    </nav>
+    <main>
+      <!-- Boutons de tri -->
+      <div class="case">
+        <h2>Boutons de tri</h2>
+        <form name="tri" class="tri">
+          <label for="all">Tous</label>
+          <input
+            type="radio"
+            name="tri"
+            id="all"
+            onclick="filterall()"
+            checked
+          />
+          <label for="first">Premiers</label>
+          <input type="radio" name="tri" id="first" onclick="filterfirst()" />
+          <label for="last">Derniers</label>
+          <input type="radio" name="tri" id="last" onclick="filterlast()" />
+        </form>
+        <ul>
+          <li class="prem">1</li>
+          <li class="prem">2</li>
+          <li>3</li>
+          <li>4</li>
+          <li class="dern">5</li>
+          <li class="dern">6</li>
+        </ul>
+      </div>
+
+      <!-- Recuperer une valeur -->
+      <!-- Attention, donne bien des noms differents a tes id, classes et fonction, js aime pas quand ça se ressemble -->
+      <div class="case">
+        <h2>Recuperer une valeur</h2>
+        <form>
+          <input
+            type="range"
+            id="volumeid"
+            name="volume"
+            min="0"
+            max="100"
+            step="5"
+            oninput="volumef()"
+          />
+        </form>
+        <p>Volume: <span id="valeurvolume">50</span>%</p>
+      </div>
+
+      <!-- Onglet -->
+
+      <div class="case">
+        <h2>Faire des onglets</h2>
+        <div class="menu">
+          <div class="navmenu">
+            <span class="ongletbouton" onclick="ongletHTML()">HTML</span>
+            <span class="ongletbouton" onclick="ongletCSS()">CSS</span>
+            <span class="ongletbouton" onclick="ongletJS()">JavaScript</span>
+          </div>
+          <div id="contentmenu">
+            <p>Je sais faire du HTML.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Notif -->
+      <div class="case" id="case-notif">
+        <div id="notif">
+          <p>Faire des Notifs Pop-Up !!</p>
+          <p>-50% sur les matelas Dormal</p>
+          <p>Rendez vous sur notre site web</p>
+          <p>*dans la limite des stocks disponible*</p>
+          <span>🔔</span>
+        </div>
+      </div>
+
+      <!-- Compteur -->
+      <div class="case" id="case-compteur">
+        <h2>Compteur</h2>
+        <div>
+          <button type="button" onclick="compteurRemove()">-1</button>
+          <span id="compteur">0</span>
+          <button type="button" onclick="compteurAdd()">+1</button>
+        </div>
+      </div>
+      
+      <!-- To-Do list -->
+      <div class="case" id="toDoList">
+        <div id="todolistSub">
+
+          <h2>To-Do List</h2>
+          <input type="text" id="tache-input">
+          <button id="btn-todo" onclick="getToDo()">Ajouter</button>
+        </div>
+        <ul id="liste-tache">
+
+        </ul>
+      </div>
+
+      <!-- NetflixNow -->
+      <div class="case" id="netflix">
+        <h2>NetflixNow</h2>
+        <p id="film">   </p>
+        <button type="button" onclick="getNetflix()">Choisir un film</button>
+      </div>
+
+
+      <!-- Galerie d'image -->
+      <div class="case">
+        <h2>Galerie d'image</h2>
+        <img id="galerie-img" src="media/lorem0.jpg" alt="Image aléatoire venant du site Lorem Pictus">
+        <div>
+          <button type="button" onclick="galeriePrev()">Précedent</button>
+          <button type="button" onclick="galerieNext()">Suivant</button>
+        </div>
+      </div>
+
+      <!-- Champ de recherche -->
+
+      <div class="case">
+        <h2>Champ de recherche</h2>
+        <input type="text" id="recherche" maxlength="16" oninput="recherche()">
+        <ul>
+          <li id="recherche-html">HTML</li>
+          <li>CSS</li>
+          <li>PHP</li>
+          <li>JavaScipt</li>
+          <li>React</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+
+      <div class="case">
+        <h2>Suivant</h2>
+      </div>
+        <!-- Fin page -->
+    </main>
+  </body>
+</html>
